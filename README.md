@@ -34,9 +34,28 @@ BLOCK DIAGRAM: 4-BIT MULTIPLEXER BUS SYSTEM
 # 5. Gate-Level Logical Circuit Diagram
 The following circuit shows the standard AND–OR realization of one bit of a 4-to-1 multiplexer. Each AND gate forms
 one product term, and the OR gate combines the terms. S1' and S0' are generated using NOT gates. The one-bit circuit is repeated for all four bit positions.
-
+GATE-LEVEL LOGIC CIRCUIT FOR ONE BIT OF A 4-to-1 MUX
 <img width="3060" height="4080" alt="1000188354" src="https://github.com/user-attachments/assets/23b1046a-d1f4-4449-87a0-e867fc05edd2" />
 <img width="867" height="582" alt="1000188357" src="https://github.com/user-attachments/assets/82e40c4a-ad3a-4d45-8c65-7fdfff485cf6" />
-
-
+The OR gate combines all four product terms to produce the selected output bit B[i].
+Repeat this one-bit circuit for i = 3, 2, 1 and 0 to form the 4-bit bus.
+# 6.Selection-Line Truth Table
+| S1 | S0 | Selected register | Bus output |
+| :--- | :--- | :--- | :--- |
+| 0 | 0 | R0 | B = R0 |
+| 0 | 1 | R1 | B = R1 |
+| 1 | 0 | R2 | B = R2 |
+| 1 | 1 | R3 | B = R3 |
+# 7. Logic Equation
+For each bit position i = 0, 1, 2, 3:
+B[i] = (S1' S0' R0[i]) + (S1' S0 R1[i])
++ (S1 S0' R2[i]) + (S1 S0 R3[i])
+Here, ' means NOT, adjacency means AND, and + means OR. The destination register loads RD ← B when load-enable is active on the active clock edge.
+# 8. Example Input Values
+| Source register | 4-bit binary data |
+| :--- | :--- |
+| R0 | 1010 |
+| R1 | 1100 |
+| R2 | 0111 |
+| R3 | 1001 |
 
