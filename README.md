@@ -14,3 +14,16 @@ Four 4-to-1 multiplexers operate in parallel—one per bit position. The four ou
 # 4. Block Diagram
 The block diagram shows the full data path from the source registers through the multiplexer bank and common bus to the destination register.
 
+```text
++------------------+       +--------------------+       +--------------+       +----------------------+
+
+| SOURCE REGISTERS |       |    4 x 4-to-1 MUX  |       |  COMMON BUS  |       | DESTINATION REGISTER |
+|     R0 (4 bits)  |       | one multiplexer    |       |  B3 B2 B1 B0 |       |      RD (4 bits)     |
+|     R1 (4 bits)  | ----> |     per bit        | ----> |              | ----> |  load enable + clock |
+|     R2 (4 bits)  |       | shared S1, S0 lines|       |              |       |                      |
+|     R3 (4 bits)  |       +--------------------+       +--------------+       +----------------------+
++------------------+                 ^
+                                     |
+                           S1, S0 (selection control)
+```
+
