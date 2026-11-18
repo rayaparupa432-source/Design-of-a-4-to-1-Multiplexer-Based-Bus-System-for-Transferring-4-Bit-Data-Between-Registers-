@@ -1,3 +1,5 @@
+<img width="993" height="654" alt="1000188336" src="https://github.com/user-attachments/assets/22f70bbf-5a30-436c-be55-9961eb0d019d" />
+<img width="2894" height="3030" alt="1000188337" src="https://github.com/user-attachments/assets/1dc332c6-ac22-4890-9cf9-66bd8af034d2" />
 # Design-of-a-4-to-1-Multiplexer-Based-Bus-System-for-Transferring-4-Bit-Data-Between-Registers
 
 # 1. Aim
@@ -27,5 +29,15 @@ The block diagram shows the full data path from the source registers through the
 |     R3 (4 bits)  |       +--------------------+       +--------------+       +----------------------+
 +------------------+      s1----selection
                           s0----control        
-```   
+```
+BLOCK DIAGRAM: 4-BIT MULTIPLEXER BUS SYSTEM
+<img width="2894" height="3030" alt="1000188337" src="https://github.com/user-attachments/assets/15bc165f-a516-4ad2-9903-337fdc550740" />
+<img width="993" height="654" alt="1000188336" src="https://github.com/user-attachments/assets/c1038e2d-4564-46c0-883b-aceab277519e" />
+# 5. Gate-Level Logical Circuit Diagram
+The following circuit shows the standard AND–OR realization of one bit of a 4-to-1 multiplexer. Each AND gate forms
+one product term, and the OR gate combines the terms. S1' and S0' are generated using NOT gates. The one-bit circuit is repeated for all four bit positions.
+
+<img width="3060" height="4080" alt="1000188354" src="https://github.com/user-attachments/assets/23b1046a-d1f4-4449-87a0-e867fc05edd2" />
+
+
 
