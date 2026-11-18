@@ -83,3 +83,5 @@ The 4-to-1 multiplexer-based bus system for transferring 4-bit data between regi
 observation table demonstrate the working of the system. Thus, the design verifies that a multiplexer-based bus provides an organized and efficient way to select and transfer data between registers
 # 13. Project Demonstration Video
 
+
+
