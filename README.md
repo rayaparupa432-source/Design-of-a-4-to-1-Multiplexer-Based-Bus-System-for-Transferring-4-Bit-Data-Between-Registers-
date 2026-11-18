@@ -48,8 +48,7 @@ Repeat this one-bit circuit for i = 3, 2, 1 and 0 to form the 4-bit bus.
 | 1 | 1 | R3 | B = R3 |
 # 7. Logic Equation
 For each bit position i = 0, 1, 2, 3:
-B[i] = (S1' S0' R0[i]) + (S1' S0 R1[i])
-+ (S1 S0' R2[i]) + (S1 S0 R3[i])
+B[i] = (S1' S0' R0[i]) + (S1' S0 R1[i])+ (S1 S0' R2[i]) + (S1 S0 R3[i])
 Here, ' means NOT, adjacency means AND, and + means OR. The destination register loads RD ← B when load-enable is active on the active clock edge.
 # 8. Example Input Values
 | Source register | 4-bit binary data |
@@ -58,4 +57,23 @@ Here, ' means NOT, adjacency means AND, and + means OR. The destination register
 | R1 | 1100 |
 | R2 | 0111 |
 | R3 | 1001 |
+# 9. Observation Table
+| S1S0 | Selected register | Bus data | RD after clock |
+| :--- | :--- | :--- | :--- |
+| 00 | R0 | 1010 | 1010 |
+| 01 | R1 | 1100 | 1100 |
+| 10 | R2 | 0111 | 0111 |
+| 11 | R3 | 1001 | 1001 |
+Note: These are sample test values. Record the actual values observed during simulation or hardware testing.
+# 10. Procedure
+1. Create four 4-bit source registers and one 4-bit destination register.
+2. Connect the corresponding bits of the four source registers to four 4-to-1 multiplexers.
+3. Connect S1 and S0 to the selection inputs of all four multiplexers.
+4. Connect the four multiplexer outputs to the common 4-bit bus.
+5. Connect the bus to the destination register input.
+6. Connect the clock and load-enable signal to the destination register.
+7. Load different binary values into the source registers.
+8. Change the selection lines, observe the bus, enable loading and apply a clock edge.
+9. Verify that the destination register contains the selected source register's data.
+
 
