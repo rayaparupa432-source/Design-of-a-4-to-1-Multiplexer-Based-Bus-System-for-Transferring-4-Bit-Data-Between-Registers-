@@ -9,8 +9,11 @@ To design a 4-to-1 multiplexer-based bus system for transferring 4-bit data betw
 - One 4-bit destination register RD, a clock pulse and a load-enable signal.
 - Digital logic simulator such as Logisim Evolution, or equivalent digital logic components.
 # 3. Theory
-A multiplexer (MUX) is a combinational circuit that selects one of several input signals and forwards the selected input to asingle output. Four 4-bit source registers share a common 4-bit bus. The two selection lines select one source register at a time.
-Four 4-to-1 multiplexers operate in parallel—one per bit position. The four outputs form the common 4-bit bus. The destinationregister loads the bus value when load-enable is active and the required clock edge occurs; otherwise, it retains its previousvalue.
+A multiplexer (MUX) is a combinational circuit that selects one of several input signals and forwards the selected input to a
+single output. Four 4-bit source registers share a common 4-bit bus. The two selection lines select one source register at a time.
+Four 4-to-1 multiplexers operate in parallel—one per bit position. The four outputs form the common 4-bit bus. The destination
+register loads the bus value when load-enable is active and the required clock edge occurs; otherwise, it retains its previous
+value.
 # 4. Block Diagram
 The block diagram shows the full data path from the source registers through the multiplexer bank and common bus to the destination register.
 
@@ -22,8 +25,7 @@ The block diagram shows the full data path from the source registers through the
 |     R1 (4 bits)  | ----> |     per bit        | ----> |              | ----> |  load enable + clock |
 |     R2 (4 bits)  |       | shared S1, S0 lines|       |              |       |                      |
 |     R3 (4 bits)  |       +--------------------+       +--------------+       +----------------------+
-+------------------+                 ^
-                                     |
-                           S1, S0 (selection control)
-```
++------------------+      s1----selection
+                          s0----control        
+```   
 
