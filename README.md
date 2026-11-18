@@ -81,3 +81,5 @@ A 4-to-1 multiplexer-based bus system was designed. The selection lines select o
 # 12. Conclusion
 The 4-to-1 multiplexer-based bus system for transferring 4-bit data between registers was successfully designed. The four source registers share a common 4-bit bus, and the selection lines S1 and S0 determine which register’s data is routed through the multiplexer bank. The selected data is transferred to the destination register RD when load-enable is active and the clock edge is applied. The block diagram, gate-level logic diagram, selection truth table, and
 observation table demonstrate the working of the system. Thus, the design verifies that a multiplexer-based bus provides an organized and efficient way to select and transfer data between registers
+# 13. Project Demonstration Video
+
