@@ -1,5 +1,3 @@
-<img width="993" height="654" alt="1000188336" src="https://github.com/user-attachments/assets/22f70bbf-5a30-436c-be55-9961eb0d019d" />
-<img width="2894" height="3030" alt="1000188337" src="https://github.com/user-attachments/assets/1dc332c6-ac22-4890-9cf9-66bd8af034d2" />
 # Design-of-a-4-to-1-Multiplexer-Based-Bus-System-for-Transferring-4-Bit-Data-Between-Registers
 
 # 1. Aim
@@ -38,6 +36,7 @@ The following circuit shows the standard AND–OR realization of one bit of a 4-
 one product term, and the OR gate combines the terms. S1' and S0' are generated using NOT gates. The one-bit circuit is repeated for all four bit positions.
 
 <img width="3060" height="4080" alt="1000188354" src="https://github.com/user-attachments/assets/23b1046a-d1f4-4449-87a0-e867fc05edd2" />
+<img width="867" height="582" alt="1000188357" src="https://github.com/user-attachments/assets/82e40c4a-ad3a-4d45-8c65-7fdfff485cf6" />
 
 
 
