@@ -64,6 +64,7 @@ Here, ' means NOT, adjacency means AND, and + means OR. The destination register
 | 01 | R1 | 1100 | 1100 |
 | 10 | R2 | 0111 | 0111 |
 | 11 | R3 | 1001 | 1001 |
+
 Note: These are sample test values. Record the actual values observed during simulation or hardware testing.
 # 10. Procedure
 1. Create four 4-bit source registers and one 4-bit destination register.
@@ -75,5 +76,8 @@ Note: These are sample test values. Record the actual values observed during sim
 7. Load different binary values into the source registers.
 8. Change the selection lines, observe the bus, enable loading and apply a clock edge.
 9. Verify that the destination register contains the selected source register's data.
-
-
+# 11. Result
+A 4-to-1 multiplexer-based bus system was designed. The selection lines select one of four source registers, and its 4-bit data is transferred through the common bus to the destination register when loading is enabled.
+# 12. Conclusion
+The 4-to-1 multiplexer-based bus system for transferring 4-bit data between registers was successfully designed. The four source registers share a common 4-bit bus, and the selection lines S1 and S0 determine which register’s data is routed through the multiplexer bank. The selected data is transferred to the destination register RD when load-enable is active and the clock edge is applied. The block diagram, gate-level logic diagram, selection truth table, and
+observation table demonstrate the working of the system. Thus, the design verifies that a multiplexer-based bus provides an organized and efficient way to select and transfer data between registers
