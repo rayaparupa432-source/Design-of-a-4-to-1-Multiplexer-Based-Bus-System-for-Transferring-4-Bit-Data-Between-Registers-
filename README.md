@@ -50,6 +50,7 @@ Repeat this one-bit circuit for i = 3, 2, 1 and 0 to form the 4-bit bus.
 # 7. Logic Equation
 For each bit position i = 0, 1, 2, 3:
 B[i] = (S1' S0' R0[i]) + (S1' S0 R1[i])+ (S1 S0' R2[i]) + (S1 S0 R3[i])
+
 Here, ' means NOT, adjacency means AND, and + means OR. The destination register loads RD ← B when load-enable is active on the active clock edge.
 # 8. Example Input Values
 | Source register | 4-bit binary data |
