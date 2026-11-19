@@ -30,6 +30,7 @@ The block diagram shows the full data path from the source registers through the
 ```
 BLOCK DIAGRAM: 4-BIT MULTIPLEXER BUS SYSTEM
 <img width="2894" height="3030" alt="1000188337" src="https://github.com/user-attachments/assets/15bc165f-a516-4ad2-9903-337fdc550740" />
+Here A=R0, B=R1, C=R2, D=R3
 <img width="993" height="654" alt="1000188336" src="https://github.com/user-attachments/assets/c1038e2d-4564-46c0-883b-aceab277519e" />
 # 5. Gate-Level Logical Circuit Diagram
 The following circuit shows the standard AND–OR realization of one bit of a 4-to-1 multiplexer. Each AND gate forms
