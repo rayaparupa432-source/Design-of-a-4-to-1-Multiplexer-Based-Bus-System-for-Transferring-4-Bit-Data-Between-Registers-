@@ -84,4 +84,12 @@ observation table demonstrate the working of the system. Thus, the design verifi
 # 13. Project Demonstration Video
 1. **Block Diagram Explanation:**(https://drive.google.com/file/d/1yLS4STdzwSplDBKHqje8NWgC7C8UEHXV/view?usp=drivesdk)
 2. **Circuit Diagram & Simulation:**(https://drive.google.com/file/d/1WDicCBzCVZr8cwTdA47BpuD3D2_ILlfV/view?usp=drivesdk)
+# Simulation & Output Screenshots
 
+# 1. Block Diagram Simulation
+(<img width="2169" height="2679" alt="1000198553" src="https://github.com/user-attachments/assets/3c279eb6-78e3-4565-821c-3302277268b7" />
+)
+
+# 2. Circuit Diagram & Output Simulation
+(<img width="2160" height="2535" alt="1000198530" src="https://github.com/user-attachments/assets/ad31918f-9b50-4c9b-874f-d8c77c751aaf" />
+)
