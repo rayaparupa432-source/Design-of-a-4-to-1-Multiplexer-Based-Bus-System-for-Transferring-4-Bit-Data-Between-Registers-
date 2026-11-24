@@ -157,6 +157,7 @@ While ideal for small register sets, pure multiplexer-based bus architectures re
 <img width="2160" height="2535" alt="1000198530" src="https://github.com/user-attachments/assets/ad31918f-9b50-4c9b-874f-d8c77c751aaf" />
 
 **11.2 Project Demonstration Video**
+
 **11.2.a Block Diagram Explanation:**(https://drive.google.com/file/d/1yLS4STdzwSplDBKHqje8NWgC7C8UEHXV/view?usp=drivesdk)
 
 **11.2.b Circuit Diagram & Simulation:**(https://drive.google.com/file/d/1WDicCBzCVZr8cwTdA47BpuD3D2_ILlfV/view?usp=drivesdk)
