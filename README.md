@@ -17,6 +17,12 @@ The methodology involves organizing four 4-to-1 multiplexers (MUX0 to MUX3) in p
 | *9.* | Conclusion
 | *10.* | References
 | *11.* | Appendix
+# Problem Statement 
+In a digital system comprising n registers, establishing direct point-to-point transfer paths between every register pair requires n(n − 1) separate multi-bit connections. As the register count and data word size grow, direct interconnection introduces critical hardware drawbacks: 
+-Excessive Wiring Congestion: High number of physical tracks increases circuit board area and routing complexity.  
+-Increased Hardware Cost & Power Consumption: Additional logic gates and buffers draw higher static and dynamic power.  
+-Bus Contention Risk: Without strict selection control, multiple registers attempting to drive shared lines simultaneously can cause signal corruption or hardware damage.   
+Therefore, there is a need to design a simplified, deterministic, and collision-free 4-bit common bus system that uses 4-to-1 multiplexers and minimal selection lines (S1 and S0) to cleanly route data from one of four source registers (R0–R3) to a destination register (RD).  
 # 1. Aim
 To design a 4-to-1 multiplexer-based bus system for transferring 4-bit data between registers using selection lines, and to verify data transfer by loading and observing register contents.
 # 2. Components Required 
