@@ -21,8 +21,30 @@ The methodology involves organizing four 4-to-1 multiplexers (MUX0 to MUX3) in p
 In a digital system comprising n registers, establishing direct point-to-point transfer paths between every register pair requires n(n − 1) separate multi-bit connections. As the register count and data word size grow, direct interconnection introduces critical hardware drawbacks:  
 - Excessive Wiring Congestion: High number of physical tracks increases circuit board area and routing complexity.  
 - Increased Hardware Cost & Power Consumption: Additional logic gates and buffers draw higher static and dynamic power.  
-- Bus Contention Risk: Without strict selection control, multiple registers attempting to drive shared lines simultaneously can cause signal corruption or hardware damage.   
+- Bus Contention Risk: Without strict selection control, multiple registers attempting to drive shared lines simultaneously can cause signal corruption or hardware damage.
+   
 Therefore, there is a need to design a simplified, deterministic, and collision-free 4-bit common bus system that uses 4-to-1 multiplexers and minimal selection lines (S1 and S0) to cleanly route data from one of four source registers (R0–R3) to a destination register (RD).  
+# Objectives  
+The primary objectives of this Computer Organisation mini project are:  
+- To design a 4-to-1 multiplexer-based common bus system capable of transferring 4-bit parallel data between registers using two shared selection lines (S1 and S0).  
+- To understand and apply Register Transfer Language (RTL) micro-operations and parallel multiplexer organization in CPU datapath design.  
+- To construct and analyze the gate-level AND–OR logic realization of a single-bit 4-to-1 multiplexer slice.  
+- To verify accurate data transfer from source registers (R0, R1, R2, R3) to the destination register (RD) under active load-enable and clock-edge conditions using truth tables and logic simulation. 
+# Literature Survey / Existing System 
+Several bus and interconnection topologies have been studied in computer architecture to handle inter-register data transfers:   
+- **Point-to-Point Dedicated Wiring:** Early digital circuits connected registers directly using dedicated gate networks. Although latency is low, the quadratic growth in wiring makes it unfeasible for multi-register processors.  
+- **Three-State (Tri-State) Buffer Bus:** Widely used in external system buses, tri-state buffers output logic 0, logic 1, or a high-impedance (Z) state. However, slight timing skews in enable signals can lead to bus contention, where two buffers drive the bus at the same time. 
+- **Multiplexer-Based Common Bus (Proposed System):** As presented in standard computer architecture texts (e.g., M. Morris Mano), a MUX-based bus eliminates bus contention entirely. Because each multiplexer inherently routes only one selected input line based on S1 and S0, it guarantees safe and predictable internal register transfers. 
+# System Requirements 
+**Hardware Requirements** 
+- **Source Registers:** Four 4-bit source registers (R0, R1, R2, and R3) — e.g., 4 × IC 74173 (4-bit D-type registers). 
+- **Multiplexers:** Four 4-to-1 multiplexers (MUX0, MUX1, MUX2, MUX3 — one for each data bit) — e.g., 2 × IC 74153 (Dual 4-to-1 Line Multiplexers). 
+- **Destination Register:** One 4-bit destination register (RD) with clock pulse and load-enable control signal (1 × IC 74173). 
+- **Control & Display Components:** Two selection switches (S1 and S0), DIP switches for binary input, 4 LEDs with 220Ω resistors, +5V DC power supply, and breadboard. 
+**Software Requirements** 
+- **Digital Logic Simulator:** Logisim Evolution (or equivalent digital circuit simulator such as Proteus / Multisim). 
+- **HDL Verification Tool (Optional):** Icarus Verilog / Xilinx Vivado for behavioral simulation. 
+- **Operating System:** Windows 10/11 or Linux (Minimum 4 GB RAM, Dual-Core Processor). 
 # 1. Aim
 To design a 4-to-1 multiplexer-based bus system for transferring 4-bit data between registers using selection lines, and to verify data transfer by loading and observing register contents.
 # 2. Components Required 
