@@ -1,5 +1,8 @@
 # Design-of-a-4-to-1-Multiplexer-Based-Bus-System-for-Transferring-4-Bit-Data-Between-Registers
 
+# Abstract 
+In modern digital computer architecture, efficient data transfer between internal processor registers is critical to overall system performance. Connecting every register directly to every other register using dedicated point-to-point wires creates severe wiring congestion, increases hardware cost, and introduces signal propagation delays. The objective of this mini project is to design and verify a collision-free common bus system capable of transferring 4-bit parallel binary data among four source registers (R0, R1, R2, and R3) to a destination register (RD) using 4-to-1 multiplexers.  
+The methodology involves organizing four 4-to-1 multiplexers (MUX0 to MUX3) in parallel, where each multiplexer handles one specific bit position across all four source registers. Two shared selection lines (S1 and S0) serve as control inputs to select which source register’s 4-bit word is placed onto the common 4-bit bus (B3 B2 B1 B0). When the load-enable signal is active, the destination register RD latches the bus data on the active clock edge. The circuit was modeled and tested using digital logic simulation tools (Logisim Evolution) and standard TTL IC specifications (IC 74153 and IC 74173). The results confirm deterministic, contention-free data routing across all selection states. 
 # 1. Aim
 To design a 4-to-1 multiplexer-based bus system for transferring 4-bit data between registers using selection lines, and to verify data transfer by loading and observing register contents.
 # 2. Components Required 
