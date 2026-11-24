@@ -88,6 +88,7 @@ one product term, and the OR gate combines the terms. S1' and S0' are generated 
 GATE-LEVEL LOGIC CIRCUIT FOR ONE BIT OF A 4-to-1 MUX
 <img width="3060" height="4080" alt="1000188354" src="https://github.com/user-attachments/assets/23b1046a-d1f4-4449-87a0-e867fc05edd2" />
 <img width="867" height="582" alt="1000188357" src="https://github.com/user-attachments/assets/82e40c4a-ad3a-4d45-8c65-7fdfff485cf6" />
+
 The OR gate combines all four product terms to produce the selected output bit B[i].
 Repeat this one-bit circuit for i = 3, 2, 1 and 0 to form the 4-bit bus.
 **7.2 Logic Equation**
@@ -112,6 +113,7 @@ Here, ' means NOT, adjacency means AND, and + means OR. The destination register
 | 0 | 1 | R1 | B = R1 |
 | 1 | 0 | R2 | B = R2 |
 | 1 | 1 | R3 | B = R3 |
+
 **8.2 Example Input Values**
 | Source register | 4-bit binary data |
 | :--- | :--- |
@@ -119,6 +121,7 @@ Here, ' means NOT, adjacency means AND, and + means OR. The destination register
 | R1 | 1100 |
 | R2 | 0111 |
 | R3 | 1001 |
+
 **8.3 Observation Table**
 | S1S0 | Selected register | Bus data | RD after clock |
 | :--- | :--- | :--- | :--- |
@@ -148,13 +151,14 @@ While ideal for small register sets, pure multiplexer-based bus architectures re
 # 11. Appendix
 **11.1 Simulation & Output Screenshots**
 **11.1.a Block Diagram Simulation**
-(<img width="2169" height="2679" alt="1000198553" src="https://github.com/user-attachments/assets/3c279eb6-78e3-4565-821c-3302277268b7" />
-)
+<img width="2169" height="2679" alt="1000198553" src="https://github.com/user-attachments/assets/3c279eb6-78e3-4565-821c-3302277268b7" />
+
 **11.1.b Circuit Diagram & Output Simulation**
-(<img width="2160" height="2535" alt="1000198530" src="https://github.com/user-attachments/assets/ad31918f-9b50-4c9b-874f-d8c77c751aaf" />
-)
+<img width="2160" height="2535" alt="1000198530" src="https://github.com/user-attachments/assets/ad31918f-9b50-4c9b-874f-d8c77c751aaf" />
+
 **11.2 Project Demonstration Video**
 **11.2.a Block Diagram Explanation:**(https://drive.google.com/file/d/1yLS4STdzwSplDBKHqje8NWgC7C8UEHXV/view?usp=drivesdk)
+
 **11.2.b Circuit Diagram & Simulation:**(https://drive.google.com/file/d/1WDicCBzCVZr8cwTdA47BpuD3D2_ILlfV/view?usp=drivesdk)
 
 
