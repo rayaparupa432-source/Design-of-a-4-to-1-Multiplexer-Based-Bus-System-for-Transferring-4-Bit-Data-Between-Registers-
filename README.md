@@ -42,7 +42,7 @@ Several bus and interconnection topologies have been studied in computer archite
 - **Destination Register:** One 4-bit destination register (RD) with clock pulse and load-enable control signal (1 × IC 74173). 
 - **Control & Display Components:** Two selection switches (S1 and S0), DIP switches for binary input, 4 LEDs with 220Ω resistors, +5V DC power supply, and breadboard.
 
-  **Software Requirements** 
+**Software Requirements** 
 - **Digital Logic Simulator:** Logisim Evolution (or equivalent digital circuit simulator such as Proteus / Multisim). 
 - **HDL Verification Tool (Optional):** Icarus Verilog / Xilinx Vivado for behavioral simulation. 
 - **Operating System:** Windows 10/11 or Linux (Minimum 4 GB RAM, Dual-Core Processor). 
